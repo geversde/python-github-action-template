@@ -31,7 +31,7 @@ jobs:
         run: echo $PWD
 
       - name: Check file existence
-          run: ls  
+          run: ls mlb.csv 
 
       - name: Upload output as artifact
         uses: actions/upload-artifact@v2
@@ -43,7 +43,7 @@ jobs:
       - name: Move CSV file
         run: mv mlb.csv rho_output
 
-        
+
       - name: Push changes to GitHub
         uses: ad-m/github-push-action@v0.6.0
         with:
