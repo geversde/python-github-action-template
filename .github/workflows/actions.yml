@@ -24,14 +24,9 @@ jobs:
       - name: Move CSV file
         run: mv mlb*.csv rho_output
 
-      - name: Configure Git
-        run: |
-          git config --global user.name "Graham Eversden"
-          git config --global user.email "geversde@andrew.cmu.edu"
-
-      - name: Commit and push changes
-        run: |
-          git add rho_output/mlb*.csv
-          git commit -m "Add output.csv"
-          git push
+      - name: push changes
+        uses: ad-m/github-push-action@v0.6.0
+        with:
+         github_token: ${{ secrets.ACCESS_KEY }}
+         branch: main
 
