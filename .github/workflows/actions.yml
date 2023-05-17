@@ -30,6 +30,16 @@ jobs:
           git config --local user.name "Graham Eversden"
           git add -A
 
+      - name: Print current working directory
+        run: echo $PWD
+        
+      - name: Upload output as artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: output
+          path: outputs/mlb.csv
+
+
       - name: Push changes to GitHub
         uses: ad-m/github-push-action@v0.6.0
         with:
