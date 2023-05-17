@@ -31,7 +31,13 @@ jobs:
         run: echo $PWD
 
       - name: Check file existence
-          run: ls mlb.csv 
+        run: |
+          if test -f mlb.csv; then
+            echo "File exists: mlb.csv"
+          else
+            echo "File does not exist: mlb.csv"
+          fi
+
 
       - name: Upload output as artifact
         uses: actions/upload-artifact@v2
