@@ -102,7 +102,7 @@ soup = BeautifulSoup(response.content, 'html.parser')
 table = soup.find("table", class_ = "Table")
 lst = pd.read_html(str(table))[0]
 lst["cities"] = [string.lstrip('@').strip() for string in lst["MATCHUP.1"]]
-mlb_info = pd.read_csv("mlbinfo.csv")
+mlb_info = pd.read_csv("mlb_info.csv")
 
 merged = pd.merge(lst, mlb_info, left_on = "cities", right_on = "City", how = "inner")
 merged["time_f"] = [datetime.combine(date.today(), datetime.strptime(time_str, "%I:%M %p").time()) for time_str in merged["TIME"]]
