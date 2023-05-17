@@ -40,6 +40,10 @@ jobs:
           name: output
           path: /home/runner/work/python-github-action-template/python-github-action-template/mlb.csv
 
+      - name: Download a single artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: mlb.csv
 
       - name: Move CSV file
         run: mv mlb.csv rho_output/
