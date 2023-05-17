@@ -125,4 +125,4 @@ t2 = time.time()
 
 print(final)
 print(t2-t1)
-final.to_csv("/Users/grahameversden/Documents/Mlb_rhos/" + dt+ ".csv")
+final.to_csv("mlb" + dt + ".csv")
