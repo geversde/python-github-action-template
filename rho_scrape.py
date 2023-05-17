@@ -32,7 +32,7 @@ def get_rho_metric(temp_c, ap_m, dew_c = 10):
     pd = p0-pv
     rho = pd / (287.0531 * (temp_c + 273.15) ) + pv / (461.4964* (temp_c + 273.5) )
     return (rho*100)
-mlb_stadiums = pd.read_csv("/Users/grahameversden/Downloads/mlb_stadiums - mlb_stadiums.csv-2.csv")
+
 
 def get_time_per(t1, t2, target_time):
     t1dif = abs(t1 - target_time).total_seconds()
@@ -102,7 +102,7 @@ soup = BeautifulSoup(response.content, 'html.parser')
 table = soup.find("table", class_ = "Table")
 lst = pd.read_html(str(table))[0]
 lst["cities"] = [string.lstrip('@').strip() for string in lst["MATCHUP.1"]]
-mlb_info = pd.read_csv("/Users/grahameversden/Downloads/mlb_info.csv")
+mlb_info = pd.read_csv("mlbinfo.csv")
 
 merged = pd.merge(lst, mlb_info, left_on = "cities", right_on = "City", how = "inner")
 merged["time_f"] = [datetime.combine(date.today(), datetime.strptime(time_str, "%I:%M %p").time()) for time_str in merged["TIME"]]
