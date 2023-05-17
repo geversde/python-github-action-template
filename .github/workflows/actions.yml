@@ -23,6 +23,7 @@ jobs:
 
       - name: Move CSV file
         run: mv mlb*.csv rho_output
+        working-directory: ${{ github.workspace }}
         
       - name: commit files
         run: |
@@ -30,9 +31,10 @@ jobs:
           git config --local user.name "Graham Eversden"
           git add -A
 
-      - name: push changes
+      - name: Push changes to GitHub
         uses: ad-m/github-push-action@v0.6.0
         with:
-         github_token: ${{ secrets.ACCESS_KEY }}
-         branch: main
+          github_token: ${{ secrets.ACCESS_TOKEN }}
+          repo: geversde/python-github-action-template
+          branch: main
 
