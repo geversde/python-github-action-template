@@ -25,10 +25,9 @@ jobs:
         run: mv mlb*.csv rho_output
         working-directory: ${{ github.workspace }}
 
-      - name: Commit and push changes
-        run: |
-          git config --global user.name "Graham Eversden"
-          git config --global user.email "geversde@andrew.cmu.edu"
-          git add .
-          git commit -m "Add CSV file"
-          git push
+      - name: push changes
+        uses: ad-m/github-push-action@v0.6.0
+        with:
+          github_token: ${{ secrets.access_key }}
+          branch: main
+
