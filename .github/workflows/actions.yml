@@ -28,6 +28,6 @@ jobs:
       - name: push changes
         uses: ad-m/github-push-action@v0.6.0
         with:
-          github_token: ${{ secrets.access_key }}
+          github_token: ${{ secrets.ACCESS_KEY }}
           branch: main
 
