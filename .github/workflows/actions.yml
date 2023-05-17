@@ -1,41 +1,34 @@
-name: run main.py
+name: Nightly Workflow
 
-on:
-  schedule:
-    - cron: '0 0 * * 1' # At 00:00 on Monday
+on: push
 
 jobs:
-  build:
+  run_python_script:
     runs-on: ubuntu-latest
+
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
 
-      - name: checkout repo content
-        uses: actions/checkout@v2 # checkout the repository content to github runner
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.x  # Specify the Python version you need
 
-      - name: setup python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.9' # install the python version needed
-          
-      - name: install python packages
+      - name: Install dependencies
+        run: pip install -r requirements.txt  # Install any required dependencies
+
+      - name: Run Python script
+        run: python mlb_scrape.py  # Replace with the actual filename of your Python script
+
+      - name: Move CSV file
+        run: mv mlb*.csv path/to/your/folder/result.csv
+        working-directory: ${{ github.workspace }}
+
+      - name: Commit and push changes
         run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
-          
-      - name: execute py script # run main.py
-        env:
-          SOME_SECRET: ${{ secrets.SOME_SECRET }}
-        run: python main.py
-          
-      - name: commit files
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add -A
-          git diff-index --quiet HEAD || (git commit -a -m "updated logs" --allow-empty)
-          
-      - name: push changes
-        uses: ad-m/github-push-action@v0.6.0
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: main 
+          git config --global user.name "Graham Eversden"
+          git config --global user.email "geversde@andrew.cmu.edu"
+          git add .
+          git commit -m "Add CSV file"
+          git push
