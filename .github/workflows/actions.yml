@@ -21,11 +21,6 @@ jobs:
       - name: Run Python script
         run: python rho_scrape.py  # Replace with the actual filename of your Python script
         
-      - name: commit files
-        run: |
-          git config --local user.email "geversde@andrew.cmu.edu"
-          git config --local user.name "Graham Eversden"
-          git add -A
 
       - name: Print current working directory
         run: echo $PWD
@@ -47,8 +42,13 @@ jobs:
 
 
       - name: Move CSV file
-        run: mv mlb.csv rho_output
+        run: mv mlb.csv rho_output/
 
+      - name: commit files
+        run: |
+          git config --local user.email "geversde@andrew.cmu.edu"
+          git config --local user.name "Graham Eversden"
+          git add -A
 
       - name: Push changes to GitHub
         uses: ad-m/github-push-action@v0.6.0
