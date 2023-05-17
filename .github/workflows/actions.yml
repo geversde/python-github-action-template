@@ -34,7 +34,7 @@ jobs:
       - name: Push changes to GitHub
         uses: ad-m/github-push-action@v0.6.0
         with:
-          github_token: ${{ secrets.ACCESS_TOKEN }}
           repository: geversde/python-github-action-template
+          github_token: ${{ secrets.ACCESS_TOKEN }}
           branch: main
 
