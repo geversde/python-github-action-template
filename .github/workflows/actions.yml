@@ -23,6 +23,12 @@ jobs:
 
       - name: Move CSV file
         run: mv mlb*.csv rho_output
+        
+      - name: commit files
+        run: |
+          git config --local user.email "geversde@andrew.cmu.edu"
+          git config --local user.name "Graham Eversden"
+          git add -A
 
       - name: push changes
         uses: ad-m/github-push-action@v0.6.0
