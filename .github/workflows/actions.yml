@@ -35,6 +35,6 @@ jobs:
         uses: ad-m/github-push-action@v0.6.0
         with:
           github_token: ${{ secrets.ACCESS_TOKEN }}
-          repo: geversde/python-github-action-template
+          repository: geversde/python-github-action-template
           branch: main
 
