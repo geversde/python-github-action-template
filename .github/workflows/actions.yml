@@ -20,9 +20,6 @@ jobs:
 
       - name: Run Python script
         run: python rho_scrape.py  # Replace with the actual filename of your Python script
-
-      - name: Move CSV file
-        run: mv mlb.csv rho_output
         
       - name: commit files
         run: |
@@ -33,6 +30,9 @@ jobs:
       - name: Print current working directory
         run: echo $PWD
 
+      - name: Check file existence
+          run: ls  
+
       - name: Upload output as artifact
         uses: actions/upload-artifact@v2
         with:
@@ -40,6 +40,10 @@ jobs:
           path: /home/runner/work/python-github-action-template/python-github-action-template/mlb.csv
 
 
+      - name: Move CSV file
+        run: mv mlb.csv rho_output
+
+        
       - name: Push changes to GitHub
         uses: ad-m/github-push-action@v0.6.0
         with:
