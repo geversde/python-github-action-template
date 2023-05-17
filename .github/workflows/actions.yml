@@ -23,7 +23,7 @@ jobs:
 
       - name: Move CSV file
         run: mv mlb*.csv rho_output
-        working-directory: ${{ github.workspace }}
+        working-directory: https://github.com/geversde/python-github-action-template/
 
       - name: push changes
         uses: ad-m/github-push-action@v0.6.0
