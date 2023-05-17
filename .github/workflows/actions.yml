@@ -13,16 +13,16 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
-          python-version: 3.x  # Specify the Python version you need
+          python-version: 3.9  # Specify the Python version you need
 
       - name: Install dependencies
         run: pip install -r requirements.txt  # Install any required dependencies
 
       - name: Run Python script
-        run: python mlb_scrape.py  # Replace with the actual filename of your Python script
+        run: python rho_scrape.py  # Replace with the actual filename of your Python script
 
       - name: Move CSV file
-        run: mv mlb*.csv path/to/your/folder/result.csv
+        run: mv mlb*.csv rho_output
         working-directory: ${{ github.workspace }}
 
       - name: Commit and push changes
