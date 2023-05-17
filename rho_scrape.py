@@ -105,7 +105,7 @@ lst["cities"] = [string.lstrip('@').strip() for string in lst["MATCHUP.1"]]
 mlb_info = pd.read_csv("mlb_info.csv")
 
 merged = pd.merge(lst, mlb_info, left_on = "cities", right_on = "City", how = "inner")
-merged["time_f"] = [datetime.combine(date.today(), datetime.strptime(time_str, "%I:%M %p").time()) for time_str in merged["TIME"]]
+merged["time_f"] = [datetime.combine(date.today(), datetime.strptime(time_str, "%I:%M %p").time()) if time_str != "LIVE" else datetime.now() for time_str in merged["TIME"] ]
 orig_tz = pytz.timezone('US/Eastern')
 local_time = []
 for i in range(len(merged)):
