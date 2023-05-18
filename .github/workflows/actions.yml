@@ -38,7 +38,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: output
-          path: /home/runner/work/python-github-action-template/python-github-action-template/mlb.csv
+          path: /home/runner/work/python-github-action-template/
 
       - name: Download a single artifact
         uses: actions/download-artifact@v3
