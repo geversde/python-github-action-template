@@ -43,7 +43,7 @@ jobs:
       - name: Download a single artifact
         uses: actions/download-artifact@v3
         with:
-          name: mlb.csv
+          name: output
 
       - name: Move CSV file
         run: mv mlb.csv rho_output/
