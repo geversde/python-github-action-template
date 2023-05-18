@@ -19,7 +19,7 @@ jobs:
         run: pip install -r requirements.txt  # Install any required dependencies
 
       - name: Run Python script
-        run: python rho_scrape.py  # Replace with the actual filename of your Python script
+        run: python rho_scrape.py > output.csv # Replace with the actual filename of your Python script
         
 
       - name: Print current working directory
