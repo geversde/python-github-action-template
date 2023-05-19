@@ -121,7 +121,9 @@ reshaped_data = [(x, y) for x, y in game_rhos]
 rhos_split = pd.DataFrame(reshaped_data, columns=['early', 'late'])
 merged["early_rho"] = rhos_split["early"]
 merged["late_rho"] = rhos_split["late"]
-final = merged[["MATCHUP", "MATCHUP.1", "local", round("early_rho",3), round("late_rho",3)]]
+final = merged[["MATCHUP", "MATCHUP.1", "local", "early_rho", "late_rho"]]
+final["early_rho"] = round(final["early_rho"],3)
+final["late_rho"] = round(final["late_rho"],3)
 t2 = time.time()
 
 print(final)
