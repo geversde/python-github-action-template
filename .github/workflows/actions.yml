@@ -20,10 +20,6 @@ jobs:
 
       - name: Run Python script
         run: python rho_scrape.py > output.csv # Replace with the actual filename of your Python script
-        
-
-      - name: Print current working directory
-        run: echo $PWD
 
       - name: Check file existence
         run: |
@@ -32,21 +28,6 @@ jobs:
           else
             echo "File does not exist: mlb.csv"
           fi
-
-
-      - name: Upload output as artifact
-        uses: actions/upload-artifact@v2
-        with:
-          name: output
-          path: /home/runner/work/python-github-action-template/
-
-      - name: Download a single artifact
-        uses: actions/download-artifact@v3
-        with:
-          name: output
-
-      - name: Move CSV file
-        run: mv mlb.csv rho_output/
 
       - name: commit files
         run: |
@@ -60,4 +41,9 @@ jobs:
           #repository: geversde/python-github-action-template
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: main
+
+      - name: push agian
+        run: | 
+          git commit -m "Latest data: ${timestamp}"
+          git push
 
