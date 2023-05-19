@@ -124,7 +124,7 @@ merged["late_rho"] = rhos_split["late"]
 final = merged[["MATCHUP", "MATCHUP.1", "local", "early_rho", "late_rho"]]
 final["early_rho"] = round(final["early_rho"],3)
 final["late_rho"] = round(final["late_rho"],3)
-final["local"] = [tmm.strftime("%I:%M %p") for tmm in final["local"]
+final["local"] = [tmm.strftime("%I:%M %p") for tmm in final["local"]]
 t2 = time.time()
 
 final.to_csv("rho_output/mlbrho" + dt + ".csv")
