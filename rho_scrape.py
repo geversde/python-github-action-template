@@ -50,6 +50,7 @@ def try2(team, gametime, stadium_df):
     time.sleep(1)
     condition  = stadium_df["Abbreviation"] == team
     lnk = stadium_df.loc[condition, "Wind Finder Link"].iloc[0]
+    if lnk == None: return (-1,-1)
     response = requests.get(lnk)
     soup = BeautifulSoup(response.content, 'html.parser')
     hour = soup.find_all('span', class_='value')
