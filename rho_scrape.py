@@ -126,4 +126,4 @@ t2 = time.time()
 
 print(final)
 print(t2-t1)
-final.to_csv("mlb.csv")
+final.to_csv("rho_output/mlbrho" + dt + ".csv")
