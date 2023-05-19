@@ -22,7 +22,7 @@
 25,MLB,Safeco Field,Seattle Mariners,Seattle,SEA,47.59138889,-122.3325,https://www.windfinder.com/forecast/seattle_puget_sound,351409,US/Pacific
 26,MLB,AT&T Park,San Francisco Giants,San Francisco,SFG,37.77833333,-122.3894444,https://www.windfinder.com/forecast/rincon_point_pier_22a1_2_san_francisco_bay,347629,US/Pacific
 27,MLB,Busch Stadium,St. Louis Cardinals,St. Louis,STL,38.6225,-90.19305556,https://www.windfinder.com/forecast/cahokia-st-louis-downtown-airport,349084,US/Central
-28,MLB,Tropicana Field,Tampa Bay Rays,Tampa Bay,TBR,27.76833333,-82.65333333,,,US/Eastern
+28,MLB,Tropicana Field,Tampa Bay Rays,Tampa Bay,TBR,27.76833333,-82.65333333,https://www.windfinder.com/forecast/cahokia-st-louis-downtown-airport,,US/Eastern
 29,MLB,Rangers Ballpark in Arlington,Texas Rangers,Texas,TEX,32.75138889,-97.08277778,https://www.windfinder.com/forecast/grand_prairie_airport,331134,US/Central
 30,MLB,Rogers Centre,Toronto Blue Jays,Toronto,TOR,43.64138889,-79.38916667,https://www.windfinder.com/forecast/marina-quay-west_toronto,55488,US/Eastern
 31,MLB,Nationals Park,Washington Nationals,Washington,WAS,38.87277778,-77.0075,https://www.windfinder.com/forecast/washington_east_potomac_park,331250,US/Eastern
