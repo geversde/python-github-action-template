@@ -124,6 +124,7 @@ merged["late_rho"] = rhos_split["late"]
 final = merged[["MATCHUP", "MATCHUP.1", "local", "early_rho", "late_rho"]]
 final["early_rho"] = round(final["early_rho"],3)
 final["late_rho"] = round(final["late_rho"],3)
+final["local"] = final["local"].strftime("%I:%M %p")
 t2 = time.time()
 
 print(final)
