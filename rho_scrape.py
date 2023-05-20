@@ -128,7 +128,9 @@ rhos_split = pd.DataFrame(reshaped_data, columns=['early', 'late'])
 merged["early_rho"] = rhos_split["early"]
 merged["late_rho"] = rhos_split["late"]
 
-final = merged[["Away", "Home", "early_rho", "late_rho", "local"]]
+final = merged[["Away", "Home", "local","early_rho", "late_rho" ]]
+final["early_rho"] = round(final["early_rho"],3)
+final["late_rho"] = round(final["late_rho"],3)
 final["local"] = [tmm.strftime("%I:%M") for tmm in final["local"]]
 
 final.to_csv("rho_output/mlbrho" + dt + ".csv")
