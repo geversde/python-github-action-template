@@ -1,6 +1,9 @@
 name: Nightly Workflow
 
-on: workflow_dispatch
+on:
+  schedule:
+    - cron: '3 * * * *'
+
 
 jobs:
   run_python_script:
