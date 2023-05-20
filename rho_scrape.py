@@ -98,15 +98,19 @@ def try2(team, gametime, stadium_df):
     return(rho)
 
 dt = datetime.today().strftime("%Y%m%d")
-response = requests.get("https://www.espn.com/mlb/schedule/_/date/" + dt)
+url = "https://www.cbssports.com/mlb/schedule/"
+dt = datetime.today().strftime('%Y%m%d')
+response = requests.get(url + dt+ "/")
 soup = BeautifulSoup(response.content, 'html.parser')
-table = soup.find("table", class_ = "Table")
+table = soup.find("table", class_ = "TableBase-table")
 lst = pd.read_html(str(table))[0]
-lst["cities"] = [string.lstrip('@').strip() for string in lst["MATCHUP.1"]]
-mlb_info = pd.read_csv("mlb_info.csv")
 
-merged = pd.merge(lst, mlb_info, left_on = "cities", right_on = "City", how = "inner")
-merged["time_f"] = [datetime.combine(date.today(), datetime.strptime(time_str, "%I:%M %p").time()) if time_str != "LIVE" else datetime.now() for time_str in merged["TIME"] ]
+mlb_info = pd.read_csv("/Users/grahameversden/Downloads/mlbrho_alldata.csv")
+merged = pd.merge(lst, mlb_info, left_on = "Home", right_on = "cbs_name", how = "inner")
+
+
+merged["time_f"] = [datetime.combine(date.today(), datetime.strptime(time_str.split("m")[0]+"m", '%I:%M %p').time()) for time_str in merged["Time / TV"]]
+
 orig_tz = pytz.timezone('US/Eastern')
 local_time = []
 for i in range(len(merged)):
@@ -116,15 +120,15 @@ local2 = []
 for tz in local_time:
     local2.append(tz.replace(tzinfo=None))
 merged["local"] = local2
+
+
 game_rhos = merged.apply(lambda row: try2(row["Abbreviation"], row["local"], mlb_info), axis = 1)
 reshaped_data = [(x, y) for x, y in game_rhos]
 rhos_split = pd.DataFrame(reshaped_data, columns=['early', 'late'])
 merged["early_rho"] = rhos_split["early"]
 merged["late_rho"] = rhos_split["late"]
-final = merged[["MATCHUP", "MATCHUP.1", "local", "early_rho", "late_rho"]]
-final["early_rho"] = round(final["early_rho"],3)
-final["late_rho"] = round(final["late_rho"],3)
-final["local"] = [tmm.strftime("%I:%M %p") for tmm in final["local"]]
-t2 = time.time()
+
+final = merged[["Away", "Home", "early_rho", "late_rho", "local"]]
+final["local"] = [tmm.strftime("%I:%M") for tmm in final["local"]]
 
 final.to_csv("rho_output/mlbrho" + dt + ".csv")
