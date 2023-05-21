@@ -2,7 +2,7 @@ name: Hourly Workflow
 
 on:
   schedule:
-    - cron: '13 */1 * * *'
+    - cron: '13 */3 * * *'
 
 
 jobs:
