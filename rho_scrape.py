@@ -116,7 +116,7 @@ orig_tz = pytz.timezone('US/Eastern')
 local_time = []
 for i in range(len(merged)):
     new_tz = merged["Time Zone"][i]
-    print(new_tz, orig_tz.localize(merged["time_f"][i])
+    print(new_tz, orig_tz.localize(merged["time_f"][i]))
     local_time.append(orig_tz.localize(merged["time_f"][i], is_dst = None).astimezone(new_tz))
 local2 = []
 for tz in local_time:
