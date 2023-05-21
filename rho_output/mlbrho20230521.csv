@@ -1,5 +1,4 @@
 ,Away,Home,local,early_rho,late_rho
-<<<<<<< HEAD
 0,N.Y. Yankees,Cincinnati,11:35,1.19,1.181
 1,Seattle,Atlanta,01:35,1.14,1.138
 2,Detroit,Washington,01:35,1.189,1.184
@@ -15,21 +14,4 @@
 12,Colorado,Texas,01:35,1.166,1.16
 13,Miami,San Francisco,01:05,1.211,1.211
 14,Minnesota,L.A. Angels,01:07,1.186,1.186
-=======
-0,N.Y. Yankees,Cincinnati,11:35,1.182,1.191
-1,Seattle,Atlanta,01:35,1.146,1.138
-2,Detroit,Washington,01:35,1.202,1.184
-3,Chi. Cubs,Philadelphia,01:35,1.202,1.183
-4,Arizona,Pittsburgh,01:35,1.161,1.144
-5,Baltimore,Toronto,01:37,1.203,1.19
-6,Cleveland,N.Y. Mets,01:40,1.205,1.184
-7,Cleveland,N.Y. Mets,07:10,1.186,1.202
-8,Milwaukee,Tampa Bay,01:40,1.174,1.178
-9,Oakland,Houston,01:10,1.182,1.183
-10,Kansas City,Chi. White Sox,01:10,1.181,1.181
-11,L.A. Dodgers,St. Louis,01:15,1.173,1.178
-12,Colorado,Texas,01:35,1.16,1.166
-13,Miami,San Francisco,01:05,1.213,1.213
-14,Minnesota,L.A. Angels,01:07,1.19,1.187
->>>>>>> 7623ba9874c7e6136f8de2b4c62d7872b1ce4d18
 15,Boston,San Diego,01:10,1.2,1.201
