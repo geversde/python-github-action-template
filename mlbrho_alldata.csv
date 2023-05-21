@@ -1,0 +1,31 @@
+1,Sport,Venue,Team(s),Abbreviation,Latitude,Longitude,Wind Finder Link,accuweather number,cbs_name,Time Zone
+2,MLB,Chase Field,Arizona Diamondbacks,ARI,33.44527778,-112.0669444,https://www.windfinder.com/forecast/phoenix_sky_harbor,346935,Arizona,US/Arizona
+3,MLB,Turner Field,Atlanta Braves,ATL,33.73527778,-84.38944444,https://www.windfinder.com/forecast/marietta_dobbins_afb,348181,Atlanta,US/Eastern
+4,MLB,Oriole Park at Camden Yards,Baltimore Orioles,BAL,39.28388889,-76.62166667,https://www.windfinder.com/forecast/baltimore_downtown,348707,Baltimore,US/Eastern
+5,MLB,Fenway Park,Boston Red Sox,BOS,42.34638889,-71.0975,https://www.windfinder.com/forecast/charles_river_basin,348735,Boston,US/Eastern
+6,MLB,Wrigley Field,Chicago Cubs,CHC,41.94833333,-87.65555556,https://www.windfinder.com/forecast/chicago_lakeview,348308,Chi. Cubs,US/Central
+7,MLB,U.S. Cellular Field,Chicago White Sox,CHW,41.83,-87.63388889,https://www.windfinder.com/forecast/northerly_island,348308,Chi. White Sox,US/Central
+8,MLB,Great American Ball Park,Cincinnati Reds,CIN,39.0975,-84.50666667,https://www.windfinder.com/forecast/cincinnati_municipal_airport,350126,Cincinnati,US/Eastern
+9,MLB,Progressive Field,Cleveland Indians,CLE,41.49583333,-81.68527778,https://www.windfinder.com/forecast/lake_erie_edgewater_state_park,350127,Cleveland,US/Eastern
+10,MLB,Coors Field,Colorado Rockies,COL,39.75611111,-104.9941667,https://www.windfinder.com/forecast/westminster_standley_lake,347810,Colorado,US/Mountain
+11,MLB,Comerica Park,Detroit Tigers,DET,42.33916667,-83.04861111,https://www.windfinder.com/forecast/detroit_west_side,348755,Detroit,US/Eastern
+12,MLB,Minute Maid Park,Houston Astros,HOU,29.75694444,-95.35555556,https://www.windfinder.com/forecast/john_dunn_helistop,351197,Houston,US/Central
+13,MLB,Kauffman Stadium,Kansas City Royals,KCR,39.05138889,-94.48055556,https://www.windfinder.com/forecast/kansas_city_downtown_airport,329441,Kansas,US/Central
+14,MLB,Angel Stadium of Anaheim,Los Angeles Angels of Anaheim,LAA,33.80027778,-117.8827778,https://www.windfinder.com/forecast/santa_ana,327150,L.A. Angels,US/Pacific
+15,MLB,Dodger Stadium,Los Angeles Dodgers,LAD,34.07361111,-118.24,https://www.windfinder.com/forecast/mt_washington,347625,L.A. Dodgers,US/Pacific
+16,MLB,Marlins Park,Miami Marlins,MIA,25.77805556,-80.21972222,https://www.windfinder.com/forecast/miami_river_5th_street_marina,347936,Miami,US/Eastern
+17,MLB,Miller Park,Milwaukee Brewers,MIL,43.02833333,-87.97111111,https://www.windfinder.com/forecast/milwaukee_inner_harbor,351543,Milwaukee,US/Central
+18,MLB,Target Field,Minnesota Twins,MIN,44.98166667,-93.27833333,https://www.windfinder.com/forecast/lake_calhoun_minneapolis,348794,Minnesota,US/Central
+19,MLB,Citi Field,New York Mets,NYM,40.75694444,-73.84583333,https://www.windfinder.com/forecast/worlds_fair_marina_flushing_bay,349727,N.Y. Mets,US/Eastern
+20,MLB,Yankee Stadium,New York Yankees,NYY,40.82916667,-73.92638889,https://www.windfinder.com/forecast/harlem_river_randalls_island_east_river,349727,N.Y. Yankees,US/Eastern
+21,MLB,O.co Coliseum,Oakland Athletics,OAK,37.75166667,-122.2005556,https://www.windfinder.com/forecast/oakland_airport_san_francisco_bay,347626,Oakland,US/Pacific
+22,MLB,Citizens Bank Park,Philadelphia Phillies,PHI,39.90583333,-75.16638889,https://www.windfinder.com/forecast/philadelphia_washington_avenue_green,350540,Philadelphia,US/Eastern
+23,MLB,PNC Park,Pittsburgh Pirates,PIT,40.44694444,-80.00583333,https://www.windfinder.com/forecast/allegheny_county_airport,1310,Pittsburgh,US/Eastern
+24,MLB,Petco Park,San Diego Padres,SDP,32.70729983,-117.1565998,https://www.windfinder.com/forecast/san_diego_sigsbee,347628,San Diego,US/Pacific
+25,MLB,Safeco Field,Seattle Mariners,SEA,47.59138889,-122.3325,https://www.windfinder.com/forecast/seattle_puget_sound,351409,Seattle,US/Pacific
+26,MLB,AT&T Park,San Francisco Giants,SFG,37.77833333,-122.3894444,https://www.windfinder.com/forecast/rincon_point_pier_22a1_2_san_francisco_bay,347629,San Francisco,US/Pacific
+27,MLB,Busch Stadium,St. Louis Cardinals,STL,38.6225,-90.19305556,https://www.windfinder.com/forecast/cahokia-st-louis-downtown-airport,349084,St. Louis,US/Central
+28,MLB,Tropicana Field,Tampa Bay Rays,TBR,27.76833333,-82.65333333,https://www.windfinder.com/forecast/cahokia-st-louis-downtown-airport,,Tampa Bay,US/Eastern
+29,MLB,Rangers Ballpark in Arlington,Texas Rangers,TEX,32.75138889,-97.08277778,https://www.windfinder.com/forecast/grand_prairie_airport,331134,Texas,US/Central
+30,MLB,Rogers Centre,Toronto Blue Jays,TOR,43.64138889,-79.38916667,https://www.windfinder.com/forecast/marina-quay-west_toronto,55488,Toronto,US/Eastern
+31,MLB,Nationals Park,Washington Nationals,WAS,38.87277778,-77.0075,https://www.windfinder.com/forecast/washington_east_potomac_park,331250,Washington,US/Eastern
