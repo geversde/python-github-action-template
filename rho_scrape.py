@@ -38,7 +38,7 @@ def get_time_per(t1, t2, target_time):
     t1dif = abs(t1 - target_time).total_seconds()
     t2dif = abs(t2 - target_time).total_seconds()
     t1perc = t1dif/(t1dif+t2dif)
-    return (t1perc)
+    return (1-t1perc)
 
 def get_values(df, i1, i2, perc):
     ap = float(df["Air Pressure"][i1]) * perc + float(df["Air Pressure"][i2]) *(1-perc)
@@ -93,6 +93,7 @@ def try2(team, gametime, stadium_df):
     late_values = get_values(air_pressure, index1late, index2late, t1perc_late)
 
     rho = (get_rho_metric(early_values[0], early_values[1]), get_rho_metric(late_values[0], late_values[1]))
+
     #print(team)
 
     return(rho)
@@ -133,5 +134,5 @@ final["early_rho"] = round(final["early_rho"],3)
 final["late_rho"] = round(final["late_rho"],3)
 final["local"] = [tmm.strftime("%I:%M") for tmm in final["local"]]
 
-print(final)
+
 final.to_csv("rho_output/mlbrho" + dt + ".csv")
