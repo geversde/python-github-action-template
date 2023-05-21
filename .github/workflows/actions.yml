@@ -1,4 +1,4 @@
-name: Nightly Workflow
+name: Hourly Workflow
 
 on:
   schedule:
