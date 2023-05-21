@@ -97,10 +97,11 @@ def try2(team, gametime, stadium_df):
 
     return(rho)
 
-dt = datetime.today().strftime("%Y%m%d")
-url = "https://www.cbssports.com/mlb/schedule/"
-dt = datetime.today().strftime('%Y%m%d')
-response = requests.get(url + dt+ "/")
+dt = datetime.today() 
+dt = dt.strftime("%Y%m%d")
+url = "https://www.cbssports.com/mlb/schedule/" + dt + "/"
+response = requests.get(url)
+time.sleep(1)
 soup = BeautifulSoup(response.content, 'html.parser')
 table = soup.find("table", class_ = "TableBase-table")
 lst = pd.read_html(str(table))[0]
@@ -132,5 +133,6 @@ final = merged[["Away", "Home", "local","early_rho", "late_rho" ]]
 final["early_rho"] = round(final["early_rho"],3)
 final["late_rho"] = round(final["late_rho"],3)
 final["local"] = [tmm.strftime("%I:%M") for tmm in final["local"]]
+
 
 final.to_csv("rho_output/mlbrho" + dt + ".csv")
