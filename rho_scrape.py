@@ -101,7 +101,6 @@ dt = datetime.today()
 dt = dt.strftime("%Y%m%d")
 url = "https://www.cbssports.com/mlb/schedule/" + dt + "/"
 response = requests.get(url)
-time.sleep(1)
 soup = BeautifulSoup(response.content, 'html.parser')
 table = soup.find("table", class_ = "TableBase-table")
 lst = pd.read_html(str(table))[0]
@@ -116,7 +115,7 @@ orig_tz = pytz.timezone('US/Eastern')
 local_time = []
 for i in range(len(merged)):
     new_tz = merged["Time Zone"][i]
-    print(new_tz, orig_tz.localize(merged["time_f"][i]))
+    print(new_tz, merged["time_f"][i])
     local_time.append(orig_tz.localize(merged["time_f"][i], is_dst = None).astimezone(new_tz))
 local2 = []
 for tz in local_time:
