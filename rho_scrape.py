@@ -106,7 +106,7 @@ soup = BeautifulSoup(response.content, 'html.parser')
 table = soup.find("table", class_ = "TableBase-table")
 lst = pd.read_html(str(table))[0]
 
-mlb_info = pd.read_csv("/Users/grahameversden/Downloads/mlbrho_alldata.csv")
+mlb_info = pd.read_csv("mlb_info_2.csv")
 merged = pd.merge(lst, mlb_info, left_on = "Home", right_on = "cbs_name", how = "inner")
 
 

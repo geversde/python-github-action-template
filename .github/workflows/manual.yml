@@ -1,8 +1,6 @@
-name: Hourly Workflow
+name: Manual Workflow
 
-on:
-  schedule:
-    - cron: '13 */1 * * *'
+on:  workflow_dispatch
 
 
 jobs:
@@ -43,4 +41,3 @@ jobs:
         run: | 
           git commit -m "Latest data: ${timestamp}"
           git push
-
