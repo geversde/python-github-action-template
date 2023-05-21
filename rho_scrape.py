@@ -97,7 +97,7 @@ def try2(team, gametime, stadium_df):
 
     return(rho)
 
-dt = datetime.today() +timedelta(days = 1)
+dt = datetime.today()
 dt = dt.strftime("%Y%m%d")
 url = "https://www.cbssports.com/mlb/schedule/" + dt + "/"
 response = requests.get(url)
@@ -115,7 +115,6 @@ orig_tz = pytz.timezone('US/Eastern')
 local_time = []
 for i in range(len(merged)):
     new_tz = merged["Time Zone"][i]
-    print(orig_tz.localize(merged["time_f"][i]).astimezone(new_tz))
     local_time.append(orig_tz.localize(merged["time_f"][i], is_dst = None).astimezone(new_tz))
 local2 = []
 for tz in local_time:
