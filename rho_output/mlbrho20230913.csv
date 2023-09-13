@@ -1,8 +1,8 @@
 ,Away,Home,local,early_rho,late_rho
 0,Tampa Bay,Minnesota,12:10,1.182,1.169
 1,Chi. Cubs,Colorado,01:10,0.972,0.966
-2,Cleveland,San Francisco,12:45,1.206,1.205
-3,L.A. Angels,Seattle,01:10,1.201,1.202
+2,Cleveland,San Francisco,12:45,1.197,1.194
+3,L.A. Angels,Seattle,01:10,1.2,1.197
 4,St. Louis,Baltimore,06:35,1.179,1.185
 5,Washington,Pittsburgh,06:35,1.156,1.164
 6,Cincinnati,Detroit,06:40,1.19,1.196
@@ -13,4 +13,4 @@
 11,Arizona,N.Y. Mets,07:10,1.179,1.187
 12,Miami,Milwaukee,06:40,1.2,1.203
 13,Kansas City,Chi. White Sox,06:40,1.192,1.193
-14,San Diego,L.A. Dodgers,07:10,1.144,1.152
+14,San Diego,L.A. Dodgers,07:10,1.147,1.153
