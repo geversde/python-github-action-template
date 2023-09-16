@@ -1,17 +1,17 @@
 ,Away,Home,local,early_rho,late_rho
-0,San Francisco,Colorado,12:10,1.005,1.002
-1,San Francisco,Colorado,06:10,1.001,1.009
-2,Boston,Toronto,03:07,1.198,1.197
+0,San Francisco,Colorado,12:10,0.987,0.981
+1,San Francisco,Colorado,06:10,0.98,0.991
+2,Boston,Toronto,03:07,1.186,1.182
 3,San Diego,Oakland,01:07,1.19,1.19
-4,Atlanta,Miami,04:10,1.155,1.158
-5,Texas,Cleveland,06:10,1.189,1.194
-6,N.Y. Yankees,Pittsburgh,06:35,1.161,1.176
-7,Tampa Bay,Baltimore,07:05,1.197,1.205
-8,Houston,Kansas City,06:10,1.146,1.157
-9,Washington,Milwaukee,06:10,1.179,1.185
-10,Minnesota,Chi. White Sox,06:10,1.173,1.177
-11,Cincinnati,N.Y. Mets,07:10,1.201,1.206
-12,Philadelphia,St. Louis,06:15,1.168,1.18
-13,Chi. Cubs,Arizona,05:10,1.088,1.094
-14,Detroit,L.A. Angels,06:07,1.185,1.191
+4,Atlanta,Miami,04:10,1.153,1.155
+5,Texas,Cleveland,06:10,1.182,1.185
+6,N.Y. Yankees,Pittsburgh,06:35,1.149,1.164
+7,Tampa Bay,Baltimore,07:05,1.185,1.194
+8,Houston,Kansas City,06:10,1.169,1.185
+9,Washington,Milwaukee,06:10,1.179,1.186
+10,Minnesota,Chi. White Sox,06:10,1.18,1.183
+11,Cincinnati,N.Y. Mets,07:10,1.185,1.194
+12,Philadelphia,St. Louis,06:15,1.181,1.187
+13,Chi. Cubs,Arizona,05:10,1.088,1.091
+14,Detroit,L.A. Angels,06:07,1.186,1.195
 15,L.A. Dodgers,Seattle,06:40,1.19,1.209
