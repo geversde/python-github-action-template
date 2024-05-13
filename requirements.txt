@@ -3,3 +3,5 @@ pytz
 pandas
 lxml
 requests
+pandas
+lxml
